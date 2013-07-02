@@ -1,0 +1,328 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html, body {
+    margin:0;
+    padding:0;
+	height:100%;
+	width:100%;
+}
+
+body {
+	position:relative;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+.hidden {display:none;}
+
+.nav_logo {
+    text-align:center;
+    padding:8px 0 8px 0;
+}
+.clear1 {
+    clear:both;
+    height:1px;
+}
+.adm_nav {
+    float:left;
+    margin:0;
+    padding:0;
+    border-right:1px solid #444;
+    height:100%;
+    min-height:1048px;
+    width:90px;
+    background-color:#444;
+}
+
+.adm_content {
+    margin:0 20px 20px 120px;
+    padding:0;
+    background-color:#fff;
+}
+
+.app_adm, .app_stu{
+    position:absolute;
+    top:0;
+    left:0;
+    margin:0;
+    padding:0;
+}
+
+.app_stu {
+	width:100%;
+	height:100%;
+}
+.stu_cont {
+	height:678px;
+}
+
+.stu_nav {
+	height:70px;
+	width:100%;
+	background-color:#00FFFF;
+	color:#000;
+	border-top:1px solid #666;
+}
+.stu_nav_btn_l,.stu_nav_btn_r {
+	height:66px;
+}
+.stu_nav_btn_l {
+	float:left;
+	width:80px;
+	margin:12px 0 0 12px;
+}
+.stu_nav_btn_r {
+	float:right;
+	min-width:80px;
+	margin:12px 12px 0 0;
+}
+.stu_nav_cont {
+	padding:0 100px 0 100px;
+}
+.stu_nav_name {
+	display:table-cell;
+	height:66px;
+	font-size:24px;
+	color:#000;
+	vertical-align:middle;
+}
+.stu_nav_lock {
+	float:right;
+	margin:20px 25px 0 0;
+	color:#bbb;
+}
+
+
+#sess_student {
+    float:left;
+    width:400px;
+}
+#sess_student_results {
+	margin-top:10px;
+}
+
+.student_res, .student_res_hi {
+	font-size:18px;
+	padding:6px;
+	margin:0 30px 6px -15px;
+}
+.student_res_hi {
+	background-color:#99FFFF;
+	border:1px solid #bbb;
+}
+
+#sess_meas {
+    float:left;
+	width:400px;
+}
+#sess_btn {
+    width:100%;
+    margin:40px 0 0 0;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.btn-group-vertical{display:block;}
+.btn-group-vertical .btn{
+    display:block;width:100%;margin-top:-1px;padding-top:5px;
+}
+.btn-group-vertical .btn.btn-large{
+    padding-top:10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.btn-group-vertical .btn:active,.btn-group-vertical .btn.active{
+    background-color:#ccc;
+    color:maroon;
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
+}
+
+.btn-group-vertical .btn:focus {
+    outline: none;
+}
+
+.btn-group-vertical .btn label, .btn-group-vertical .btn i {background-color:transparent;}
+
+
+input[type="checkbox"] {
+    font-size:18px;
+    padding-left:25px;
+}
+
+div.meas_itm {
+	clear:both;
+	width:100%;
+    padding-bottom:4px;
+    margin-bottom:8px;
+    border-bottom:1px solid #999;
+}
+
+label.meas {
+	float:left;
+    font-size:16px;
+}
+
+.btn-more {
+    float:right;
+    margin:0 0 0 10px;
+}
+
+label.radio {
+    font-size:16px;
+	padding-bottom:8px;
+}
+ul.student {
+	margin:0 60px 0 -10px;
+}
+span.right {
+	float:right;
+}
+
+#PIN_modal {
+	position: fixed;
+	top: 350px;
+	left: 450px;
+	width:274px;
+}
+
+.modal-header {
+  padding: 9px 9px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  line-height: 20px;
+}
+
+.modal-body {
+  padding: 9px;
+  line-height:125%;
+}
+
+.modal-footer {
+  padding: 9px 9px 9px;
+}
+
+#PIN_entries {
+	margin:15px 0 15px 0;
+}
+
+.well_pin {
+	float:left;
+	width:40px;
+	padding-top:15px;
+	text-align:center;
+	font-size:32px;
+	margin:0 4px 0 0;
+}
+.well_pin_hi {
+	background-color:#00CCFF;
+}
+
+#tooltip
+{
+    text-align: center;
+    color: #fff;
+    background: #111;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+ 
+    #tooltip:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #111;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #tooltip.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #111;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #tooltip.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #tooltip.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }
+        
+
+
+

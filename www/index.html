@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css"  media="screen"/>
+		
+        <title>Edumetrics - Baseline Assessment</title>
+    </head>
+    <body onload="">
+        <div class="app_adm">
+            <div class="adm_nav" data-spy="affix">
+                <div class="btn-group-vertical" data-toggle="buttons-radio">
+                    <button type="button" id="home" class="btn btn-large admBtn active"><img src="css/img/Ba_logo.png" width="36" height="35" /><label>Home</label></button>
+                    <button type="button" id="session" class="btn btn-large admBtn"><i class="icon-group icon-2x"></i> <label>Session</label></button>
+                    <button type="button" id="results" class="btn btn-large admBtn"><i class="icon-bar-chart icon-2x"></i> <label>Results</label></button>
+					<button type="button" id="measures" class="btn btn-large admBtn"><i class="icon-tasks icon-2x"></i> <label>Tests</label></button>
+                    <button type="button" id="settings" class="btn btn-large admBtn"><i class="icon-gear icon-2x"></i> <label>Settings</label></button>
+                    <button type="button" id="logout" class="btn btn-large logoutBtn"><i class="icon-reply icon-2x"></i> <label>Logout</label></button>
+                </div>
+            </div>
+			<div id="page_login" class="adm_content hidden">
+			
+			</div>
+            <div id="page_home" class="adm_content">
+                <h1>Baseline Assessment</h1>
+                <p>Description of the Baseline Assessment Tool and how it can be used within schools. Aenean ut nunc nisl. Donec consequat massa et tortor aliquam feugiat id vel orci. Integer odio eros, porta at orci nec, varius laoreet ipsum. Donec felis sapien, tristique ut blandit aliquet, luctus quis risus. Praesent libero orci, iaculis at scelerisque a, auctor eget purus. In ut lorem massa.</p>
+                <p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
+				<p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
+				<p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
+				<p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
+            </div>
+            <div id="page_session" class="adm_content hidden">
+                <h1>Session</h1>
+                    <div id="sess_student">
+                        <h2>Student Last Name</h2>
+						<form id="frmStuSearch" action="" onsubmit="sessSearchSubmit();return false;">
+                        <div class="input-append">
+                            <input type="text" id="student_name" name="student_name" value="">
+                            <button id="sess_search" class="btn" type="button">Search</button>
+                        </div>
+						</form>
+                        <div id="sess_student_results"></div>
+                    </div>
+                    <div id="sess_meas">
+                        <h2>Test Measures</h2>
+						<div id="sess_meas_cont"></div>
+                        <form id="frmSession">
+                        <div id="sess_btn">
+                            <button id="sess_start" class="btn btn-large btn-primary" type="button">Launch Testing Session</button>
+                        </div>
+                        </form>
+                    </div>
+                
+            </div>
+            <div id="page_results" class="adm_content hidden">
+                <h1>Results</h1>
+            </div>
+			<div id="page_measures" class="adm_content hidden">
+                <h1>Measures</h1>
+            </div>
+            <div id="page_settings" class="adm_content hidden">
+                <h1>Settings</h1>
+            </div>
+        </div>
+		<div class="app_stu hidden">
+			<div class="stu_cont">
+			
+			</div>
+			<div class="stu_nav">
+				<div class="stu_nav_btn_l hidden"></div>
+				<div class="stu_nav_btn_r">
+					<button id="stu_start" class="btn btn-large btn-primary" type="button">&nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;</button>
+				</div>
+				<div class="stu_nav_cont">
+					<div class="stu_nav_lock"><i class="icon-lock icon-2x"></i></div>
+					<div class="stu_nav_name">Jimmy Smith</div>
+					
+				</div>
+            </div>
+		</div>
+		<div id="PIN_modal" class="modal hide" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header"><h3>Enter PIN</h3></div>
+			<div class="modal-body">
+				Type a 4-digit number to start the session and lock out admin functions. Use the same number to re-enter admin mode.
+				<div id="PIN_entries">
+					<div class="well well-small well_pin" id="well_pin1"></div>
+					<div class="well well-small well_pin" id="well_pin2"></div>
+					<div class="well well-small well_pin" id="well_pin3"></div>
+					<div class="well well-small well_pin" id="well_pin4"></div>
+					<div class="clear1"></div>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-large pin-btn" rel="1">1</button>
+					<button class="btn btn-large pin-btn" rel="2">2</button>
+					<button class="btn btn-large pin-btn" rel="3">3</button>
+					<button class="btn btn-large pin-btn" rel="4">4</button>
+					<button class="btn btn-large pin-btn" rel="5">5</button>
+				</div>
+				<br>
+				<div class="btn-group">
+					<button class="btn btn-large pin-btn" rel="6">6</button>
+					<button class="btn btn-large pin-btn" rel="7">7</button>
+					<button class="btn btn-large pin-btn" rel="8">8</button>
+					<button class="btn btn-large pin-btn" rel="9">9</button>
+					<button class="btn btn-large pin-btn" rel="0">0</button>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" id="PIN_cancel">Cancel</button>
+				<button class="btn btn-primary" id="PIN_ok">Ok</button>
+			</div>
+	</div>
+	
+    </body>
+	
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hammer.min.js"></script>
+    <script type="text/javascript" src="js/dba/memory_adapter.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+</html>
