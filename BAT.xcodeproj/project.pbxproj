@@ -41,9 +41,16 @@
 		5AA0E66F1729F460000DC89A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66E1729F460000DC89A /* ImageIO.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
-		FA8E7D19177CA4BC00323331 /* dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8E7D18177CA4BC00323331 /* dropbox.framework */; };
 		FA8E7D1B177CA57400323331 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8E7D1A177CA57400323331 /* Security.framework */; };
-		FA8E7D21177CB0F900323331 /* BATDropbox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8E7D20177CB0F900323331 /* BATDropbox.m */; };
+		FA8E7D2F1788AE3E00323331 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA8E7D2B1788AE3E00323331 /* README.md */; };
+		FA8E7D301788AE3E00323331 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = FA8E7D2C1788AE3E00323331 /* release_notes.md */; };
+		FA91363C17D8D99E00C888AF /* HRMPlugin.js in Sources */ = {isa = PBXBuildFile; fileRef = FA91363B17D8D99E00C888AF /* HRMPlugin.js */; };
+		FA91363E17D8D9FF00C888AF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA91363D17D8D9FF00C888AF /* Accelerate.framework */; };
+		FA91364017D8DA1500C888AF /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA91363F17D8DA1500C888AF /* ExternalAccessory.framework */; };
+		FA91364817D8F6BC00C888AF /* libmyTrekSDK_armv7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8E7D35178EFA6300323331 /* libmyTrekSDK_armv7.a */; };
+		FA91364917D8FCFF00C888AF /* HRMPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FA91364617D8F03A00C888AF /* HRMPlugin.m */; };
+		FABD09AD17EB449400E64072 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8E7D2A1788AE3E00323331 /* libTestFlight.a */; };
+		FABD09AF17EB458B00E64072 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FABD09AE17EB458B00E64072 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,10 +112,19 @@
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* BAT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "BAT-Info.plist"; path = "../BAT-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = BAT/config.xml; sourceTree = "<group>"; };
-		FA8E7D18177CA4BC00323331 /* dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dropbox.framework; sourceTree = "<group>"; };
 		FA8E7D1A177CA57400323331 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		FA8E7D1F177CB0F900323331 /* BATDropbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATDropbox.h; sourceTree = "<group>"; };
-		FA8E7D20177CB0F900323331 /* BATDropbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATDropbox.m; sourceTree = "<group>"; };
+		FA8E7D2A1788AE3E00323331 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		FA8E7D2B1788AE3E00323331 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FA8E7D2C1788AE3E00323331 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		FA8E7D2D1788AE3E00323331 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		FA8E7D35178EFA6300323331 /* libmyTrekSDK_armv7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmyTrekSDK_armv7.a; sourceTree = "<group>"; };
+		FA8E7D36178EFA6300323331 /* mytrekSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mytrekSDK.h; sourceTree = "<group>"; };
+		FA91363B17D8D99E00C888AF /* HRMPlugin.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = HRMPlugin.js; path = www/js/HRMPlugin.js; sourceTree = "<group>"; };
+		FA91363D17D8D9FF00C888AF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		FA91363F17D8DA1500C888AF /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		FA91364517D8F03A00C888AF /* HRMPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRMPlugin.h; sourceTree = "<group>"; };
+		FA91364617D8F03A00C888AF /* HRMPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRMPlugin.m; sourceTree = "<group>"; };
+		FABD09AE17EB458B00E64072 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +132,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABD09AF17EB458B00E64072 /* libz.dylib in Frameworks */,
+				FABD09AD17EB449400E64072 /* libTestFlight.a in Frameworks */,
+				FA91364017D8DA1500C888AF /* ExternalAccessory.framework in Frameworks */,
+				FA91363E17D8D9FF00C888AF /* Accelerate.framework in Frameworks */,
 				FA8E7D1B177CA57400323331 /* Security.framework in Frameworks */,
 				301BF5BF109A6A2B0062928A /* CoreLocation.framework in Frameworks */,
 				5AA0E66F1729F460000DC89A /* ImageIO.framework in Frameworks */,
@@ -132,10 +152,10 @@
 				301BF5BD109A6A2B0062928A /* CFNetwork.framework in Frameworks */,
 				301BF5C1109A6A2B0062928A /* MediaPlayer.framework in Frameworks */,
 				301BF5C3109A6A2B0062928A /* QuartzCore.framework in Frameworks */,
+				FA91364817D8F6BC00C888AF /* libmyTrekSDK_armv7.a in Frameworks */,
 				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
-				FA8E7D19177CA4BC00323331 /* dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +202,13 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				FABD09AE17EB458B00E64072 /* libz.dylib */,
+				FA91363F17D8DA1500C888AF /* ExternalAccessory.framework */,
+				FA91363D17D8D9FF00C888AF /* Accelerate.framework */,
+				FA91363B17D8D99E00C888AF /* HRMPlugin.js */,
+				FA8E7D34178EFA6300323331 /* ScoscheSDK */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
+				FA8E7D291788AE3E00323331 /* TestFlightSDK1.2.6 */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -224,7 +250,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA8E7D18177CA4BC00323331 /* dropbox.framework */,
 				FA8E7D1A177CA57400323331 /* Security.framework */,
 				5AEE5B34173C68D80009041E /* CoreLocation.framework */,
 				5AA0E66E1729F460000DC89A /* ImageIO.framework */,
@@ -259,8 +284,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				FA8E7D1F177CB0F900323331 /* BATDropbox.h */,
-				FA8E7D20177CB0F900323331 /* BATDropbox.m */,
+				FA91364517D8F03A00C888AF /* HRMPlugin.h */,
+				FA91364617D8F03A00C888AF /* HRMPlugin.m */,
 			);
 			name = Plugins;
 			path = BAT/Plugins;
@@ -300,6 +325,26 @@
 				30A0434614DC770100060A13 /* Localizable.strings */,
 			);
 			path = se.lproj;
+			sourceTree = "<group>";
+		};
+		FA8E7D291788AE3E00323331 /* TestFlightSDK1.2.6 */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E7D2A1788AE3E00323331 /* libTestFlight.a */,
+				FA8E7D2B1788AE3E00323331 /* README.md */,
+				FA8E7D2C1788AE3E00323331 /* release_notes.md */,
+				FA8E7D2D1788AE3E00323331 /* TestFlight.h */,
+			);
+			path = TestFlightSDK1.2.6;
+			sourceTree = "<group>";
+		};
+		FA8E7D34178EFA6300323331 /* ScoscheSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E7D35178EFA6300323331 /* libmyTrekSDK_armv7.a */,
+				FA8E7D36178EFA6300323331 /* mytrekSDK.h */,
+			);
+			path = ScoscheSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +434,8 @@
 				3088BBBD154F3926009F9C59 /* Default-Landscape@2x~ipad.png in Resources */,
 				3088BBBE154F3926009F9C59 /* Default-Landscape~ipad.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
+				FA8E7D2F1788AE3E00323331 /* README.md in Resources */,
+				FA8E7D301788AE3E00323331 /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +466,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				FA8E7D21177CB0F900323331 /* BATDropbox.m in Sources */,
+				FA91364917D8FCFF00C888AF /* HRMPlugin.m in Sources */,
+				FA91363C17D8D99E00C888AF /* HRMPlugin.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,8 +535,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BAT/BAT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1.2.6\"",
+					"\"$(SRCROOT)/ScoscheSDK\"",
+				);
 				PRODUCT_NAME = BAT;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -508,8 +562,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BAT/BAT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1.2.6\"",
+					"\"$(SRCROOT)/ScoscheSDK\"",
+				);
 				PRODUCT_NAME = BAT;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};

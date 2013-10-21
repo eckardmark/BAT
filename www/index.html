@@ -1,50 +1,78 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=768, target-densitydpi=device-dpi" />
         
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
         <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/video-js.css"  media="screen"/>
         <link rel="stylesheet" type="text/css" href="css/index.css"  media="screen"/>
 		
         <title>Edumetrics - Baseline Assessment</title>
     </head>
     <body onload="">
-        <div class="app_adm">
+        <div class="app_adm hidden">
             <div class="adm_nav" data-spy="affix">
                 <div class="btn-group-vertical" data-toggle="buttons-radio">
-                    <button type="button" id="home" class="btn btn-large admBtn active"><img src="css/img/Ba_logo.png" width="36" height="35" /><label>Home</label></button>
-                    <button type="button" id="session" class="btn btn-large admBtn"><i class="icon-group icon-2x"></i> <label>Session</label></button>
+                    <button type="button" id="home" class="btn btn-large admBtn active"><img src="css/img/Ba_logo.png" width="35" height="36" /><label>Home</label></button>
+                    <button type="button" id="session" class="btn btn-large admBtn"><i class="icon-sitemap icon-2x"></i> <label>Session</label></button>
                     <button type="button" id="results" class="btn btn-large admBtn"><i class="icon-bar-chart icon-2x"></i> <label>Results</label></button>
-					<button type="button" id="measures" class="btn btn-large admBtn"><i class="icon-tasks icon-2x"></i> <label>Tests</label></button>
+					<button type="button" id="measures" class="btn btn-large admBtn"><i class="icon-tasks icon-2x"></i> <label>Measures</label></button>
+                    <button type="button" id="students" class="btn btn-large admBtn"><i class="icon-group icon-2x"></i> <label>Students</label></button>
                     <button type="button" id="settings" class="btn btn-large admBtn"><i class="icon-gear icon-2x"></i> <label>Settings</label></button>
-                    <button type="button" id="logout" class="btn btn-large logoutBtn"><i class="icon-reply icon-2x"></i> <label>Logout</label></button>
+                    <button type="button" id="logout" class="btn btn-large admBtn"><i class="icon-reply icon-2x"></i> <label>Logout</label></button>
                 </div>
             </div>
-			<div id="page_login" class="adm_content hidden">
-			
-			</div>
             <div id="page_home" class="adm_content">
                 <h1>Baseline Assessment</h1>
-                <p>Description of the Baseline Assessment Tool and how it can be used within schools. Aenean ut nunc nisl. Donec consequat massa et tortor aliquam feugiat id vel orci. Integer odio eros, porta at orci nec, varius laoreet ipsum. Donec felis sapien, tristique ut blandit aliquet, luctus quis risus. Praesent libero orci, iaculis at scelerisque a, auctor eget purus. In ut lorem massa.</p>
-                <p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
-				<p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
-				<p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
-				<p>Fusce euismod justo id sem posuere lobortis. Sed consectetur, felis in sodales gravida, odio mi tempus magna, vel fringilla quam ipsum vitae mi. Nullam porta at diam at eleifend. In bibendum auctor neque, a hendrerit elit sollicitudin vitae. Maecenas venenatis pharetra turpis sit amet interdum. Quisque consequat sapien libero, eu elementum lectus posuere ac. Donec mollis rutrum pellentesque. Nulla ut condimentum erat.</p>
+                <div style="float:right;margin:0 0 20px 20px;"><img id="adm_home_img" src="img/stu_ipad.jpg" class="img-polaroid" /></div>
+                <p>The Baseline Assessment Tool for iPad establishes valid starting points from which to track students’ academic and personal growth. This provides the first step in demonstrating your school’s added value over other educational options as your students move up in grades. Given to students in kindergarten through 2nd grade, it also detects mild learning and attention difficulties early on and provides an accurate description of a child’s learning characteristics.</p>
+                <p>The constructs and measuring instruments used in the baseline assessment are based on a thorough examination of peer-reviewed journal articles. The BAT collects data in the following areas:</p>
+
+                <ul>
+                    <li>Early reading ability (phonological awareness, letter-word recognition, comprehension, and fluency)</li>
+                    <li>Early math ability  (counting, number recognition, number sense)</li>
+                    <li>Executive function (sustained attention, inhibitory control)</li>
+                    <li>Visual-Motor abilities (copying geometric figures, fine motor control)</li>
+                    <li>Strengths and weaknesses in visual, auditory and verbal processing to assess learning style</li>
+                    <li>Temperament (shyness, activity level, sociability)</li>
+                    <li>Emotional functioning (frustration tolerance, ability to delay gratification, test anxiety, self esteem)</li>
+                    <li>Moral character (empathy, moral identity, altruism)</li>
+                </ul>
+
             </div>
             <div id="page_session" class="adm_content hidden">
                 <h1>Session</h1>
                     <div id="sess_student">
-                        <h2>Student Last Name</h2>
-						<form id="frmStuSearch" action="" onsubmit="sessSearchSubmit();return false;">
-                        <div class="input-append">
-                            <input type="text" id="student_name" name="student_name" value="">
-                            <button id="sess_search" class="btn" type="button">Search</button>
+                        <h2>Student</h2>
+                        <div id="stu_well" class="well">
+						    <form id="frmStuSearch" action="" onsubmit="sessSearchSubmit();return false;">
+                            <div class="input-append">
+                                <input type="text" id="student_name" name="student_name" placeholder="By last name - starting with" />
+                                <button id="sess_search" class="btn" type="button">Search</button>
+                            </div>
+                            <div id="grd-label">Grade</div>
+                            <div class="btn-group">
+                                <button class="btn grd-btn" type="button" rel="P">P</button>
+                                <button class="btn grd-btn" type="button" rel="K">K</button>
+                                <button class="btn grd-btn" type="button" rel="1">1</button>
+                                <button class="btn grd-btn" type="button" rel="2">2</button>
+                                <button class="btn grd-btn" type="button" rel="3">3</button>
+                                <button class="btn grd-btn" type="button" rel="4">4</button>
+                                <button class="btn grd-btn" type="button" rel="5">5</button> <br>
+                                <button class="btn grd-btn" type="button" rel="6">6</button>
+                                <button class="btn grd-btn" type="button" rel="7">7</button>
+                                <button class="btn grd-btn" type="button" rel="8">8</button>
+                                <button class="btn grd-btn" type="button" rel="9">9</button>
+                                <button class="btn grd-btn" type="button" rel="10">10</button>
+                                <button class="btn grd-btn" type="button" rel="11">11</button>
+                                <button class="btn grd-btn" type="button" rel="12">12</button>
+                            </div>
+                            </form>
                         </div>
-						</form>
                         <div id="sess_student_results"></div>
                     </div>
                     <div id="sess_meas">
@@ -60,28 +88,65 @@
             </div>
             <div id="page_results" class="adm_content hidden">
                 <h1>Results</h1>
+                <div class="results_search">
+                    <div class="results_search_title">Search By</div>
+                    <div class="results_search_crit">
+                        <div class="crit_sec">
+                            <div class="crit_lbl">Grade:</div>
+                            <button class="btn res-grd-btn" type="button" rel="P">P</button>
+                            <button class="btn res-grd-btn" type="button" rel="K">K</button>
+                            <button class="btn res-grd-btn" type="button" rel="1">1</button>
+                            <button class="btn res-grd-btn" type="button" rel="2">2</button>
+                            <button class="btn res-grd-btn" type="button" rel="3">3</button>
+                            <button class="btn res-grd-btn" type="button" rel="4">4</button>
+                            <button class="btn res-grd-btn" type="button" rel="5">5</button>
+                            <button class="btn res-grd-btn" type="button" rel="6">6</button>
+                            <button class="btn res-grd-btn" type="button" rel="7">7</button>
+                            <button class="btn res-grd-btn" type="button" rel="8">8</button>
+                            <button class="btn res-grd-btn" type="button" rel="9">9</button>
+                            <button class="btn res-grd-btn" type="button" rel="10">10</button>
+                            <button class="btn res-grd-btn" type="button" rel="11">11</button>
+                            <button class="btn res-grd-btn" type="button" rel="12">12</button>
+                            <button class="btn res-grd-btn btn-primary" type="button" rel="">All</button>
+                        </div>
+                        <div class="crit_sec">
+                            <div class="crit_lbl">Measure:</div>
+                            <select id="results_meas_sel"></select>
+                        </div>
+                    </div>
+                    <div class="clear1"></div>
+                </div>
+                <div id="page_results_cont"></div>
+
             </div>
 			<div id="page_measures" class="adm_content hidden">
                 <h1>Measures</h1>
+                <div id="page_measures_cont"></div>
+            </div>
+            <div id="page_students" class="adm_content hidden">
+                <h1>Students</h1>
+                <div id="page_students_cont"></div>
             </div>
             <div id="page_settings" class="adm_content hidden">
                 <h1>Settings</h1>
+                <div id="page_settings_cont"></div>
             </div>
         </div>
 		<div class="app_stu hidden">
-			<div class="stu_cont">
-			
-			</div>
-			<div class="stu_nav">
-				<div class="stu_nav_btn_l hidden"></div>
-				<div class="stu_nav_btn_r">
-					<button id="stu_start" class="btn btn-large btn-primary" type="button">&nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;</button>
-				</div>
-				<div class="stu_nav_cont">
-					<div class="stu_nav_lock"><i class="icon-lock icon-2x"></i></div>
-					<div class="stu_nav_name">Jimmy Smith</div>
-					
-				</div>
+			<div class="stu_cont"></div>
+            <div class="stu_nav_wrap">
+                <div class="stu_nav">
+                    <div class="stu_nav_btn_l hidden">
+                        <button id="stu_repeat_btn" class="btn btn-large btn-warning meas_l" type="button"><i class="icon-repeat"></i></button>
+                    </div>
+                    <div class="stu_nav_btn_r">
+                        <button id="stu_nav_btn_r" class="btn btn-large btn-primary meas_r" rel="start" type="button"><span id="stu_nav_btn_r_txt">Start</span><i class="icon-arrow-right"></i></button>
+                    </div>
+                    <div class="stu_nav_cont">
+                        <div class="stu_nav_icons"><span class="stu_nav_meas_num"></span><i class="icon-lock icon-2x"></i></div>
+                        <div class="stu_nav_name"></div>
+                    </div>
+                </div>
             </div>
 		</div>
 		<div id="PIN_modal" class="modal hide" tabindex="-1" role="dialog" aria-hidden="true">
@@ -112,18 +177,50 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn" data-dismiss="modal" id="PIN_cancel">Cancel</button>
-				<button class="btn btn-primary" id="PIN_ok">Ok</button>
+				<button class="btn btn-large" data-dismiss="modal" id="PIN_cancel">Cancel</button>
+				<button class="btn btn-large btn-primary" id="PIN_ok">Ok</button>
 			</div>
-	</div>
-	
+	    </div>
+        <div id="login_modal" class="modal hide" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-header"><h3>Admin Login</h3></div>
+            <div class="modal-body">
+                <div class="modal-content">
+                <form id="frmLogin" action="" onsubmit="loginSubmit();return false;">
+                    <div class="control-group">
+                        <span class="clearable">
+                            <input class="data_field" type="email" id="loginEmail" placeholder="email" required value="eckardmark@gmail.com"/>
+                            <span class="icon_clear">x</span>
+                        </span>
+                    </div>
+                    <div class="control-group">
+                        <span class="clearable">
+                            <input class="data_field" type="password" id="loginPassword" placeholder="password" required value="edubat1?"/>
+                            <span class="icon_clear">x</span>
+                        </span>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="btn btn-large btn-primary btn-login">Login</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+	    <div id="measLoadAlert" class="alert hidden">
+            <div id="measLoadTitle">Checking for updates ...</div>
+            <div id="measLoadInfo"></div>
+	    </div>
     </body>
-	
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script type="text/javascript" src="js/jquery.hammer.min.js"></script>
     <script type="text/javascript" src="js/dba/memory_adapter.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
+    <script type="text/javascript" src="js/stats.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
 </html>

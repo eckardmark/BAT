@@ -27,9 +27,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import <dropbox/DBAccount.h>
-#import <dropbox/DBAccountManager.h>
-#import <dropbox/DBFileSystem.h>
+#import "TestFlight.h"
 
 #import <Cordova/CDVPlugin.h>
 
@@ -66,18 +64,9 @@
  */
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    
-    DBAccountManager *accountManager =
-    [[DBAccountManager alloc] initWithAppKey:@"sfiod66zq0daur3" secret:@"i9o2ianyvo8vaql"];
-    [DBAccountManager setSharedManager:accountManager];
-    
-    DBAccount *account = [accountManager.linkedAccounts objectAtIndex:0];
-    if (account) {
-        DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
-        [DBFilesystem setSharedFilesystem:filesystem];
-        NSLog(@"App linked successfully.");
-    }
+     [TestFlight takeOff:@"3fafbd05-724d-409f-aca5-5143c4a81a8f"];
+	
+	CGRect screenBounds = [[UIScreen mainScreen] bounds];
 
 #if __has_feature(objc_arc)
         self.window = [[UIWindow alloc] initWithFrame:screenBounds];
@@ -123,19 +112,6 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
-  sourceApplication:(NSString *)source annotation:(id)annotation {
-    
-    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
-    if (account) {
-        DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
-        [DBFilesystem setSharedFilesystem:filesystem];
-        NSLog(@"App linked successfully.");
-        return YES;
-    }
-    return NO;
-    
-}
 
 // repost the localnotification using the default NSNotificationCenter so multiple plugins may respond
 - (void)            application:(UIApplication*)application

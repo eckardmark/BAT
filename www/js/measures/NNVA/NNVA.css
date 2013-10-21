@@ -1,0 +1,65 @@
+.NNVA_qcont {
+
+}
+
+.NNVA_qnum {
+    position:fixed;
+    top:50px;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    color:#0081c2;
+}
+
+.NNVA_matrix {
+    position:fixed;
+    top:90px;
+    left:350px;
+    width:308px;
+    height:308px;
+    border:3px solid #000;
+}
+
+.NNVA_choices {
+    position:fixed;
+    top:430px;
+    left:304px;
+    width:410px;
+    height:206px;
+    border:none;
+    z-index:0;
+}
+
+.NNVA_sel {
+    width:92px;
+    height:92px;
+    border:none;
+}
+.NNVA_sel_hi {
+    border:6px solid #ff0000;
+    background-color: rgba(170,170,170,0.2);
+}
+.NNVA_ans_hi {
+    border:6px solid #007700;
+}
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8{position:fixed;z-index:999;}
+.c1 {top:430px;left:304px;}
+.c2 {top:430px;left:406px;}
+.c3 {top:430px;left:508px;}
+.c4 {top:430px;left:610px;}
+.c5 {top:533px;left:304px;}
+.c6 {top:533px;left:406px;}
+.c7 {top:533px;left:508px;}
+.c8 {top:533px;left:610px;}
+
+.NNVA_reminderText {
+    position:fixed;
+    top:670px;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-size:20px;
+    color:#802420;
+}

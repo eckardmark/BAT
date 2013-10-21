@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html manifest="ant.manifest">
+<head>
+	<title>ANT</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<script src="js/onLoad.js" type="text/javascript"></script>
+	<script src="js/navigation.js" type="text/javascript"></script>
+	<script src="js/timer.js" type="text/javascript"></script>
+	<script src="js/export.js" type="text/javascript"></script>
+	<script src="js/random.js" type="text/javascript"></script>
+	<script src="js/analyzeResults.js" type="text/javascript"></script>
+	<script src="js/trial.js" type="text/javascript"></script>
+	<script src="js/statistics.js" type="text/javascript"></script>
+	<script src="js/dates.js" type="text/javascript"></script>
+	<script src="js/display.js" type="text/javascript"></script>
+	
+	<script src="config/trialSet.js" type="text/javascript"></script>
+	<script src="config/targetTypes.js" type="text/javascript"></script>
+	<script src="config/dimensions.js" type="text/javascript"></script>
+</head>
+<body onload="onLoad();">
+	<div id="content">
+		<div id="instructionPage1" class="instructionsPage">
+			<p>You will see 5 <b>arrows</b> on the screen</p>
+			<div>
+			<img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" />
+			</div>
+			<p>Pay attention to the <b><i>MIDDLE</i></b> arrow, and tell which way it is pointing by pressing the red LEFT or green RIGHT buttons .
+			</p>
+			<input class="previousButton" type="button" name="previous" value="Previous" onclick="popView();" />
+			<input class="nextButton" type="button" name="next" value="Next" onclick="pushView('instructionPage2');" />
+		</div>
+		
+		<div id="instructionPage2" class="instructionsPage" style="visibility:hidden">
+			<p>There will be a cross in the middle of the screen, and the arrows will appear just above or below the cross.</p>
+			<center>
+				<table id="instructionPageTable">
+					<tr>
+						<td><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /></td>
+						<td class="spacing"></td>
+						<td class="spacing"></td>
+					</tr>
+					<tr>
+						<td class="spacing"></td>
+						<td class="spacing"></td>
+						<td class="spacing"></td>
+					</tr>
+					<tr>
+						<td><img src="images/plus.png" class="cue" /></td>
+						<td class="spacing">OR</td>
+						<td><img src="images/plus.png" class="cue" /></td>
+					</tr>
+					<tr>
+						<td class="spacing"></td>
+						<td class="spacing"></td>
+						<td class="spacing"></td>
+					</tr>
+					<tr>
+						<td class="spacing"></td>
+						<td class="spacing"></td>
+						<td><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /></td>
+					</tr>
+				</table>
+			</center>
+			<p>Keep your eyes fixed on the cross during the test, rather than moving them to look at the <u>arrows</u>.</p>
+			<input class="previousButton" type="button" name="previous" value="Previous" onclick="popView();" />
+			<input class="nextButton" type="button" name="next" value="Next" onclick="pushView('instructionPage3');" />
+		</div>
+		
+		<div id="instructionPage3" class="instructionsPage" style="visibility:hidden">
+			<p>Sometimes, one or more asterisks <img src="images/star.png" class="cue imageintext" /> will appear shortly before the <span class='targetTypeRef'>target</span>s.</p>
+			<p>When they are presented, the asterisks always appear exactly one half second before the <span class='targetTypeRef'>target</span>s.</p>
+			<p>If only one asterisk appears, and it is above or below the cross, it also tells you the location in which the arrows will appear.</p>
+			<input class="previousButton" type="button" name="previous" value="Previous" onclick="popView();" />
+			<input class="nextButton" type="button" name="next" value="Next" onclick="pushView('instructionPage4');" />
+		</div>
+		
+		<div id="instructionPage4" class="instructionsPage" style="visibility:hidden">
+			<p>As mentioned earlier, you must pay attention to the central <span class='targetTypeRef'>target</span>, and indicate which way it is pointing by pressing the LEFT or RIGHT arrow keys on the keyboard.</p>
+			<p>Respond as quickly as you can, but without making too many mistakes.</p>
+			<p>To facilitate quick responding, keep your left and right index fingers over the LEFT and RIGHT buttons.</p>
+			<input class="previousButton" type="button" name="previous" value="Previous" onclick="popView();" />
+			<input class="nextButton" type="button" name="next" value="Next" onclick="pushView('instructionPage5');" />
+		</div>
+		
+		<div id="instructionPage5" class="instructionsPage" style="visibility:hidden">
+			<p>There are <span id="numberOfTestBlocks"></span> blocks of trials, with short breaks in between.</p>
+			<p>The first block is for practice, and takes about 2 minutes.</p>
+			<p>If you make a mistake during the practice block, an error message will appear.  If no error message appears, you will know that you responded correctly.</p>
+			<p>No feedback is given during the 2 test blocks.</p>
+			<p>Please tell the test supervisor if you are ready to begin.</p>
+			<input class="previousButton" type="button" name="previous" value="Previous" onclick="popView();" />
+			<input class="nextButton" type="button" name="next" value="Next" onclick="areYouReady();" />
+		</div>
+		<div id="testPageContainer" style="visibility:hidden">
+			<div id="testPage" style="visibility:hidden">
+				<center>
+				<!--Blank View-->
+				<div id="blankView" class="display" style="visibility:hidden">
+				</div>
+				<!--No Cue-->
+				<div id="cueType10" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<div class="target"></div>
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<div class="target"></div>
+					<div class="frameMargin"></div>
+				</div>
+				<!--Center Cue-->
+				<div id="cueType20" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<div class="target"></div>
+					<div class="spacing"></div>
+					<img src="images/star.png" class="cue" />
+					<div class="spacing"></div>
+					<div class="target"></div>
+					<div class="frameMargin"></div>
+				</div>
+				<!--Double Cue-->
+				<div id="cueType30" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<img src="images/star.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/star.png" class="cue" />
+					<div class="frameMargin"></div>
+				</div>
+				<!--Top Cue-->
+				<div id="cueType4UP" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<img src="images/star.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<div class="target"></div>
+					<div class="frameMargin"></div>
+				</div>
+				<!--Bottom Cue-->
+				<div id="cueType4DOWN" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<div class="target"></div>
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/star.png" class="cue" />
+					<div class="frameMargin"></div>
+				</div>
+				<!--Top Congruent Right-->
+				<div id="congruentUPR" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" />
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<div class="target"></div>
+					<div class="frameMargin"></div>
+				</div>
+				<!--Top Congruent Left-->
+				<div id="congruentUPL" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" />
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<div class="target"></div>
+					<div class="frameMargin"></div>
+				</div>
+				<!--Top Incongruent Right-->
+				<div id="incongruentUPR" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" />
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<div class="target"></div>
+					<div class="frameMargin"></div>
+				</div>
+				<!--Top Incongruent Left-->
+				<div id="incongruentUPL" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" />
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<div class="target"></div>
+					<div class="frameMargin"></div>
+				</div>
+				<!--Bottom Congruent Right-->
+				<div id="congruentDOWNR" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<div class="target"></div>
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" />
+					<div class="frameMargin"></div>
+				</div>
+				<!--Bottom Congruent Left-->
+				<div id="congruentDOWNL" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<div class="target"></div>
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" />
+					<div class="frameMargin"></div>
+				</div>
+				<!--Bottom Incongruent Right-->
+				<div id="incongruentDOWNR" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<div class="target"></div>
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" />
+					<div class="frameMargin"></div>
+				</div>
+				<!--Bottom Incongruent Left-->
+				<div id="incongruentDOWNL" class="display" style="visibility:hidden">
+					<div class="frameMargin"></div>
+					<div class="target"></div>
+					<div class="spacing"></div>
+					<img src="images/plus.png" class="cue" />
+					<div class="spacing"></div>
+					<img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowLeft.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" /><img src="images/targets/ArrowRight.png" class="target" />
+					<div class="frameMargin"></div>
+				</div>
+				<!--Practice Feedback-->
+				</center>
+				<div id="practiceFeedbackUP" class="practiceFeedback"></div>
+				<div id="practiceFeedbackDOWN" class="practiceFeedback"></div>
+			</div>
+		</div>
+		<div id="exportPage" class="instructionsPage" style="visibility:hidden">
+			<center>
+				<h1>Save Data</h1>
+				<h3>Follow these instructions to save your test data.</h3>
+				<br />
+				
+				<table>
+					<tr><td><h3>Summary Data Export</h3></td><td><h3>Raw Data Export</h3></td></tr>
+					<tr>
+						<td>
+							<ol>
+								<li>Press <span class='fullscreenKey'>F11</span> to leave fullscreen mode</li>
+								<li>Copy the following text: <input id="summaryFilename" class="filename" /></li>
+								<li>Click this link:
+									<div id="summaryExport"></div>
+									<div id="summaryExportLink"></div>
+								</li>
+								<li>Choose "File" --> "Save Page As" option.</li>
+								<li>Paste the above text as the name of the file in the save dialog, select destination and click the "Save" button.</li>
+							</ol>
+						</td>
+						<td>
+							<ol>
+								<li>Press <span class='fullscreenKey'>F11</span> to leave fullscreen mode</li>
+								<li>Copy the following text: <input id="dataFilename" class="filename" /></li>
+								<li>Click this link:
+									<div id="dataExport"></div>
+									<div id="dataExportLink"></div>
+								</li>
+								<li>Choose "File" --> "Save Page As" option.</li>
+								<li>Paste the above text as the name of the file in the save dialog, select destination and click the "Save" button.</li>
+							</ol>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

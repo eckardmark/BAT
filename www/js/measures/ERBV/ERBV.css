@@ -1,0 +1,28 @@
+.erbv_qbox{
+    width:440px;
+    height:64px;
+    padding:32px 0 0 110px;
+    margin: 15px 0 0 0;
+    text-align:left;
+    border:2px solid #666;
+    font-size:24px;
+    font-weight:bold;
+    line-height:100%;
+}
+.emo_1{background: #fff url(img/em_scale_1.png) 8px 8px no-repeat;}
+.emo_2{background: #fff url(img/em_scale_2.png) 8px 8px no-repeat;}
+.emo_3{background: #fff url(img/em_scale_3.png) 8px 8px no-repeat;}
+.emo_4{background: #fff url(img/em_scale_4.png) 8px 8px no-repeat;}
+.emo_5{background: #fff url(img/em_scale_5.png) 8px 8px no-repeat;}
+.emo_6{background: #fff url(img/em_scale_6.png) 8px 8px no-repeat;}
+
+.erbv_qbox_hi{background-color:#ccc;}
+
+.underlined {
+    padding-bottom:2px;
+    border-bottom:3px solid #999;
+}
+
+.video-js{margin:24px 0 0 75px;}
+.black_back{background-color:#000;}
+.HRM_data{margin:10px 0 0 0;color:#fff;text-align:center;}
